@@ -1,0 +1,563 @@
+/* =========================
+   基本設定
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    font-family:
+        "Arial",
+        "Yu Gothic",
+        "Meiryo",
+        sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef8ff,
+            #ffffff
+        );
+
+    color: #4b5b70;
+}
+
+
+/* =========================
+   ヘッダー
+========================= */
+
+header {
+    text-align: center;
+
+    padding:
+        35px
+        20px
+        25px;
+}
+
+header h1 {
+    margin: 0;
+
+    font-size: 32px;
+
+    color: #65a9dc;
+}
+
+header p {
+    margin:
+        5px
+        0
+        0;
+
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+    color: #8da9c2;
+}
+
+
+/* =========================
+   メイン
+========================= */
+
+main {
+    width: 92%;
+
+    max-width: 800px;
+
+    margin: auto;
+}
+
+
+/* =========================
+   検索
+========================= */
+
+.search-box {
+    margin-bottom: 15px;
+}
+
+.search-box input {
+    width: 100%;
+
+    padding:
+        15px
+        18px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    font-size: 16px;
+
+    background: white;
+
+    box-shadow:
+        0 4px 15px
+        rgba(
+            100,
+            150,
+            190,
+            0.12
+        );
+
+    outline: none;
+}
+
+.search-box input:focus {
+    box-shadow:
+        0 4px 18px
+        rgba(
+            100,
+            150,
+            190,
+            0.25
+        );
+}
+
+
+/* =========================
+   フィルターボタン
+========================= */
+
+.filter-buttons {
+    display: flex;
+
+    gap: 8px;
+
+    margin-bottom: 20px;
+
+    overflow-x: auto;
+
+    padding-bottom: 3px;
+}
+
+.filter-button {
+    flex-shrink: 0;
+
+    border: none;
+
+    border-radius: 20px;
+
+    padding:
+        9px
+        15px;
+
+    background: white;
+
+    color: #7190a8;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    box-shadow:
+        0 3px 10px
+        rgba(
+            100,
+            150,
+            190,
+            0.1
+        );
+}
+
+.filter-button.active {
+    background: #75b5e6;
+
+    color: white;
+}
+
+
+/* =========================
+   コレクション情報
+========================= */
+
+.collection-info {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    background: white;
+
+    border-radius: 15px;
+
+    padding:
+        15px
+        18px;
+
+    margin-bottom: 25px;
+
+    box-shadow:
+        0 4px 15px
+        rgba(
+            100,
+            150,
+            190,
+            0.1
+        );
+}
+
+.collection-info > div {
+    font-size: 14px;
+}
+
+.info-title {
+    margin-right: 5px;
+
+    color: #8b9bad;
+}
+
+#owned-count,
+#total-count,
+#collection-rate {
+    font-weight: bold;
+
+    color: #5d8fb8;
+}
+
+
+/* =========================
+   カード一覧
+========================= */
+
+.section-title {
+    margin:
+        0
+        0
+        15px;
+
+    color: #5d8fb8;
+
+    font-size: 22px;
+}
+
+.card-list {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            1fr
+        );
+
+    gap: 15px;
+}
+
+
+/* =========================
+   カード
+========================= */
+
+.card {
+    background: white;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 18px
+        rgba(
+            100,
+            150,
+            190,
+            0.12
+        );
+
+    transition:
+        transform 0.2s;
+}
+
+.card:hover {
+    transform:
+        translateY(-3px);
+}
+
+
+/* =========================
+   ダミーカード画像
+========================= */
+
+.card-image {
+    width: 100%;
+
+    aspect-ratio:
+        3 / 4;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #bde6ff,
+            #f4fbff
+        );
+
+    color: white;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.card:nth-child(2n) .card-image {
+    background:
+        linear-gradient(
+            135deg,
+            #d8c9ff,
+            #f7f3ff
+        );
+}
+
+.card:nth-child(3n) .card-image {
+    background:
+        linear-gradient(
+            135deg,
+            #ffd3e5,
+            #fff5fa
+        );
+}
+
+
+/* =========================
+   カード情報
+========================= */
+
+.card-info {
+    padding: 12px;
+}
+
+.card-number {
+    font-size: 11px;
+
+    color: #9aabba;
+
+    margin-bottom: 3px;
+}
+
+.card-name {
+    font-size: 14px;
+
+    font-weight: bold;
+
+    color: #5d7286;
+
+    margin-bottom: 5px;
+}
+
+.card-rarity {
+    display: inline-block;
+
+    font-size: 11px;
+
+    padding:
+        3px
+        7px;
+
+    border-radius: 10px;
+
+    background: #eef6fc;
+
+    color: #6b9bc0;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   ボタン
+========================= */
+
+.card-buttons {
+    display: flex;
+
+    gap: 5px;
+}
+
+.owned-button,
+.wish-button {
+    flex: 1;
+
+    border: none;
+
+    border-radius: 10px;
+
+    padding:
+        8px
+        4px;
+
+    font-size: 11px;
+
+    cursor: pointer;
+
+    background: #f1f5f8;
+
+    color: #8295a5;
+}
+
+.owned-button.active {
+    background: #8bc4ed;
+
+    color: white;
+}
+
+.wish-button.active {
+    background: #f6d66b;
+
+    color: white;
+}
+
+
+/* =========================
+   カードがない場合
+========================= */
+
+.no-card {
+    grid-column:
+        1 / -1;
+
+    text-align: center;
+
+    padding: 50px 10px;
+
+    color: #9aabba;
+}
+
+
+/* =========================
+   フッター
+========================= */
+
+footer {
+    text-align: center;
+
+    padding:
+        35px
+        10px;
+
+    font-size: 12px;
+
+    color: #a8b5c2;
+}
+
+
+/* =========================
+   スマホ表示
+========================= */
+
+@media (max-width: 600px) {
+
+    header {
+        padding-top: 25px;
+    }
+
+    header h1 {
+        font-size: 27px;
+    }
+
+    main {
+        width: 94%;
+    }
+
+    .card-list {
+        grid-template-columns:
+            repeat(
+                2,
+                1fr
+            );
+
+        gap: 10px;
+    }
+
+    .card-info {
+        padding: 10px;
+    }
+
+    .card-name {
+        font-size: 13px;
+    }
+
+    .collection-info {
+        font-size: 13px;
+    }
+
+}
+/* =========================
+   カード画像
+========================= */
+
+.card-image {
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+/* =========================
+   所持枚数ボタン
+========================= */
+
+.card-buttons {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.quantity {
+    min-width: 38px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: #5d8fb8;
+}
+
+.owned-button {
+    flex: 1;
+}
+
+/* =========================
+   弾数フィルター
+========================= */
+
+.series-buttons {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    overflow-x: auto;
+}
+
+.series-button {
+    border: none;
+    background: #eaf5ff;
+    color: #5d8fb8;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.series-button.active {
+    background: #8ec5e8;
+    color: white;
+}
