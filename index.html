@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>アイカツ！カードコレクション</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         ヘッダー
+    ========================== -->
+
+    <header>
+        <h1>✨ アイカツ！</h1>
+        <p>CARD COLLECTION</p>
+    </header>
+
+
+    <!-- =========================
+         メイン
+    ========================== -->
+
+    <main>
+
+        <!-- 検索 -->
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="search-input"
+                placeholder="🔍 カードを検索"
+            >
+
+        </div>
+
+
+        <!-- フィルター -->
+
+<div class="filter-buttons">
+
+    <button
+        class="filter-button active"
+        data-filter="all"
+    >
+        すべて
+    </button>
+
+    <button
+        class="filter-button"
+        data-filter="owned"
+    >
+        💙 所持
+    </button>
+
+    <button
+        class="filter-button"
+        data-filter="not-owned"
+    >
+        ⬜ 未所持
+    </button>
+
+    <button
+        class="filter-button"
+        data-filter="wish"
+    >
+        ⭐ 欲しい
+    </button>
+
+</div>
+
+
+<!-- 弾数フィルター -->
+
+<div
+    class="series-buttons"
+    id="series-buttons"
+></div>
+
+<!-- タイプフィルター -->
+
+<div
+    class="filter-section"
+>
+
+    <div class="filter-title">
+        タイプ
+    </div>
+
+    <div
+        class="filter-buttons"
+        id="type-buttons"
+    ></div>
+
+</div>
+
+
+<!-- ブランドフィルター -->
+
+<div
+    class="filter-section"
+>
+
+    <div class="filter-title">
+        ブランド
+    </div>
+
+    <div
+        class="filter-buttons"
+        id="brand-buttons"
+    ></div>
+
+</div>
+
+
+<!-- レアリティフィルター -->
+
+<div
+    class="filter-section"
+>
+
+    <div class="filter-title">
+        レアリティ
+    </div>
+
+    <div
+        class="filter-buttons"
+        id="rarity-buttons"
+    ></div>
+
+</div>
+
+        <!-- =========================
+             コレクション情報
+        ========================== -->
+
+        <div class="collection-info">
+
+            <div>
+                <span class="info-title">所持カード</span>
+                <span id="owned-count">0</span>
+                /
+                <span id="total-count">0</span>
+                枚
+            </div>
+
+            <div>
+                <span class="info-title">コンプリート率</span>
+                <span id="collection-rate">0</span>%
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             カード一覧
+        ========================== -->
+
+        <section>
+
+            <h2 class="section-title">
+                📚 カード一覧
+            </h2>
+
+            <div
+                id="card-list"
+                class="card-list"
+            >
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         フッター
+    ========================== -->
+
+    <footer>
+
+        <p>
+            アイカツ！カードコレクション
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="masters.js"></script>
+    <script src="cards.js"></script>
+    <script src="script.js"></script> 
+
+</body>
+
+</html>
